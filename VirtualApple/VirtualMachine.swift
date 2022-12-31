@@ -127,7 +127,7 @@ class VirtualMachine: NSObject, VZVirtualMachineDelegate {
 		vmConfiguration.memorySize = configuration.memorySize
 
 		let graphics = VZMacGraphicsDeviceConfiguration()
-		graphics.displays = [VZMacGraphicsDisplayConfiguration(widthInPixels: configuration.screenWidth * configuration.screenScale, heightInPixels: configuration.screenHeight * configuration.screenScale, pixelsPerInch: 100 * configuration.screenScale)]
+		graphics.displays = [VZMacGraphicsDisplayConfiguration(widthInPixels: configuration.screenWidth, heightInPixels: configuration.screenHeight, pixelsPerInch: 144 * configuration.screenScale)]
 		vmConfiguration.graphicsDevices = [graphics]
 
 		vmConfiguration.keyboards = [VZUSBKeyboardConfiguration()]
